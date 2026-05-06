@@ -30,6 +30,8 @@ def main():
     player1 = Player(x, y)
     asteroidsfield1 = AsteroidField()
 
+
+
     while True:
         log_state()
         for event in pygame.event.get():
@@ -40,8 +42,12 @@ def main():
         for obj in asteroids:
             if obj.collides_with(player1):
                 log_event("player_hit")
-                print("Game over!")
-                sys.exit()
+                obj.split()
+                player1.lives -= 1
+                player1.position = (SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+                if player1.lives == 0:
+                    print("Game Over")
+                    sys.exit()
             for bullet in shots:
                 if obj.collides_with(bullet):
                     log_event("asteroid_shot")

@@ -1,3 +1,5 @@
+import random
+
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 PLAYER_RADIUS = 20
@@ -11,3 +13,6 @@ ASTEROID_MAX_RADIUS = ASTEROID_MIN_RADIUS * ASTEROID_KINDS
 SHOT_RADIUS = 5
 PLAYER_SHOOT_SPEED = 500
 PLAYER_SHOOT_COOLDOWN_SECONDS = 0.3
+SHOT_COLOR = [
+    "firebrick1", "deeppink", "darkorchid1", "cyan", "chartreuse", "aqua", "blue1", "dodgerblue1", "fuchsia", "green", "greenyellow", "hotpink", "mediumspringgreen", "orangered", "orchid1", "paleturquoise1", "seagreen1"
+]
